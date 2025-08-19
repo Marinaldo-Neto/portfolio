@@ -1,0 +1,110 @@
+@use 'colors';
+@use 'mixins';
+
+.contact {
+    @include mixins.flex-center;
+    flex-direction: column;
+    padding-top: 60px;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(0, colors.$dark, colors.$darker);
+
+    h1 {
+        color: colors.$lighter;
+        text-shadow: 0px 0px 8px colors.$normal;
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 80%;
+
+        div {
+            @include mixins.flex-center;
+            flex-direction: column;
+            gap: 8px;
+            background-color: colors.$dark;
+            border-radius: 5px;
+            width: 30%;
+            height: 70%;
+            box-shadow: 0px 0px 10px colors.$darker;
+            text-align: center;
+            color: colors.$lighter;
+
+            i {
+                font-size: 3rem;
+            }
+
+            p {
+                font-weight: 300;
+
+                a {
+                    text-decoration: none;
+                    color: colors.$light;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    border-bottom: solid 2px colors.$light;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        h1 {
+            font-size: 3rem;
+        }
+
+        main {
+            width: 90%;
+
+            div {
+                p {
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        main {
+            div {
+                p {
+                    font-size: x-small;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contact {
+        justify-content: space-evenly;
+        height: 100%;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        main {
+            flex-direction: column;
+            height: 80%;
+
+            div {
+                width: 60%;
+                height: 30%;
+            }
+        }
+    }
+}

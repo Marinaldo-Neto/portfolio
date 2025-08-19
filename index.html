@@ -1,103 +1,278 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <!--PADRÃO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imgs/FavIcon.svg" type="image/x-icon">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css"/>
+
+    <!--INFOs-->
+    <link rel="shortcut icon" href="img/foto.jpg" type="image/x-icon">
+    <title>Portfólio - Marinaldo Neto</title>
+    <meta name="description" content="Portfólio de José Marinaldo Tavares Neto, desenvolvedor web e entusiasta de design UI/UX e desenvolvimento de jogos. Projetos em HTML, CSS, JavaScript, PHP, Python, Godot e mais. Confira meus trabalhos, habilidades e formas de contato.">
+    <meta name="author" content="José Marinaldo Tavares Neto">
+
+    <!--OPEN GRAPH-->
+    <meta property="og:title" content="Portfólio - Marinaldo Neto">
+    <meta property="og:description" content="Portfólio de José Marinaldo Tavares Neto, desenvolvedor web e entusiasta de design UI/UX e desenvolvimento de jogos. Projetos em HTML, CSS, JavaScript, PHP, Python, Godot e mais. Confira meus trabalhos, habilidades e formas de contato.">
+    <meta property="og:image" content="img/foto.jpg">
+    <meta property="og:url" content="https://marinaldo-neto.github.io/portfolio/">
+    <meta property="og:type" content="website">
+
+    <!--LINKS DE UTILITÁRIOS-->
+    <link rel="stylesheet" href="css/style.css"> <!--CSS-->
+    <script src="https://kit.fontawesome.com/d112e8387b.js" crossorigin="anonymous"></script> <!--ICONS FA-->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> <!--ICONS DEV-->
+    
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--CABEÇALHO-->
     <header>
-        <span class="left">
-            <img class="img-perfil" src="imgs/perfil.jpg" alt="foto de perfil">
-            <p class="iceberg-regular">José Marinaldo</p>
-        </span>
-        <span class="right">
-            <p><a class="head-buttons" href="#home">Home</a></p>
-            <p><a class="head-buttons" href="#sobre">Sobre</a></p>
-            <p><a class="head-buttons" href="#skills">Skills</a></p>
-            <p><a class="head-buttons" href="#contato">Contato</a></p>
-        </span>
+        <!--ORGANIZAR ITENS-->
+        <nav aria-label="Menu Header">
+            <!--LOGO + NOME -->
+            <a class="logo" href="#home"><i class="fa-brands fa-web-awesome" aria-label="Logo"></i></a>
+            <!--LINKS-->
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li> <!--SECTION 2-->
+                <li><a href="#skill">Tecnologias</a></li> <!--SECTION 3-->
+                <li><a href="#project">Projetos</a></li> <!--SECTION 4-->
+                <li><a href="#contact">Contatos</a></li> <!--SECTION 5-->
+            </ul>
+        </nav>
     </header>
+
+    <!--SECTION 1-->
     <section class="home" id="home">
-        <p class="text-home">Olá, me chamo José Marinaldo e sou um <span class="text-highlight">Desenvolvedor</span> em 
-            <span class="text-highlight">Desenvolvimento</span>!</p>
-        <img class="img-home" src="imgs/perfil.jpg" alt="Foto José Marinaldo">
+        <!--PARTE ESQUERDA-->
+        <article class="esquerda">
+            <!--TEXTO-->
+            <h1>Olá, me chamo <span class="highlight">Marinaldo</span> e sou um <span class="highlight">Desenvolvedor</span>
+             em <span class="highlight">Desenvolvimento</span>!</h1>
+            <!--BOTÕES-->
+            <span class="linha">
+                <button class="btn btn-download"><a href="download/Currículo José Marinaldo.pdf" download><i class="fa-solid fa-file-arrow-down"></i>Baixar Currículo</a></button>
+                <button class="btn btn-contact"><a href="#contact"><i class="fa-solid fa-comments"></i>Fale Comigo</a></button>
+            </span>
+        </article>
+        <!--PARTE DIREITA-->
+        <article class="direita">
+            <!--FOTO PERFIL-->
+            <img src="img/foto.jpg" alt="Foto de José Marinaldo Tavares Neto">
+        </article>
+        <!--SETINHA-->
+        <i class="fa-solid fa-angles-down arrow" aria-label="Role para baixo"></i>
     </section>
-    <section class="sobre" id="sobre">
-        <img class="img-sobre" src="imgs/unifip.jpg" alt="Foto UNIFIP">
-        <p class="text-sobre">
-            Meu nome completo é <strong>José Marinaldo Tavares Neto</strong>, mas prefiro que me chamem de Marinaldo. 
-            <strong>Tenho 18 anos (nasci em 15/03/2006)</strong> e moro em Patos, no sertão da Paraíba, Brasil. Atualmente, estou cursando <strong>Análise e 
-            Desenvolvimento de Sistemas (ADS)</strong> na UNIFIP Patos, porém fiz o ensino médio no IFPB Campus Patos onde concluí o 
-            curso <strong>Técnico em Informática</strong>. Também gosto da área de design (gráfico, UI, UX), possuo algumas habilidades na área.
-        </p>
+
+    <!--SECTION 2-->
+    <section class="about" id="about">
+        <!--TÍTULO-->
+        <h1>Sobre Mim</h1>
+        <!--CONTAINER-->
+        <main>
+            <!--TEXTO-->
+            <p>Olá! Meu nome é <span class="highlight">José Marinaldo Tavares Neto</span>, mas pode me chamar de <span class="highlight">Marinaldo</span>. Tenho 19 anos e sou natural de <span class="highlight">Patos</span>, no sertão da <span class="highlight">Paraíba</span>. Atualmente, curso <span class="highlight">Análise e Desenvolvimento de Sistemas (ADS)</span> na <span class="highlight">UNIFIP Patos</span>.</p>
+            <p>Minha trajetória começou no <span class="highlight">Instituto Federal da Paraíba (IFPB) – Campus Patos</span>, onde concluí o ensino médio integrado ao curso <span class="highlight">Técnico em Informática</span>. Desde então, venho aprimorando meus conhecimentos em programação, tecnologia e design.</p>
+            <p>Tenho um grande interesse pela área de <span class="highlight">design</span> — especialmente <span class="highlight">UI e UX</span> — e já desenvolvi habilidades práticas que aplico em projetos pessoais e acadêmicos. Além disso, gosto de explorar o universo do <span class="highlight">desenvolvimento de jogos</span>, unindo criatividade e lógica para criar experiências interativas.</p>
+            <p>Busco constantemente aprender, inovar e transformar ideias em soluções digitais funcionais e visualmente atraentes.</p>
+        </main>
     </section>
-    <section class="skills" id="skills">
-        <table>
-            <thead> 
-                <tr> 
-                    <th>Ícone</th> 
-                    <th>Skill</th>
-                    <th>Nível</th>
-                </tr>
-            </thead>
-            <tbody> 
-                <tr> 
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></td>
-                    <td>HTML</td>
-                    <td>Intermediário/Avançado</td>
-                </tr>
-                <tr> 
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></td>
-                    <td>CSS</td>
-                    <td>Intermediário</td>
-                </tr>
-                <tr>
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></td>
-                    <td>Python</td>
-                    <td>Intermediário</td>
-                </tr>
-                <tr>
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" /></td>
-                    <td>PHP</td>
-                    <td>Intermediário</td>
-                </tr>
-                <tr>
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /></td>
-                    <td>Java</td>
-                    <td>Básico</td>
-                </tr>
-                <tr>
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" /></td>
-                    <td>MySql</td>
-                    <td>Básico/Intermediário</td>
-                </tr>
-                <tr>
-                    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" /></td>
-                    <td>FIGMA</td>
-                    <td>Intermediário/Avançado</td>
-                </tr>
-            </tbody>
-        </table>
-        <img class="img-skills" src="imgs/projetos.png" alt="Foto Projetos">
+
+    <!--SECTION 3-->
+    <section class="skill" id="skill">
+        <!--TÍTULO-->
+        <h1>Tecnologias</h1>
+        <!--CONTAINER-->
+        <main>
+            <!--HTML-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                </a>
+            </span>
+            <!--CSS-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS</p>
+                </a>
+            </span>
+            <!--JS-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-square-js"></i>
+                    <p>Javascript</p>
+                </a>
+            </span>
+            <!--SASS-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-sass"></i>
+                    <p>SASS</p>
+                </a>
+            </span>
+            <!--BOOTSTRAP-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <p>Bootstrap</p>
+                </a>
+            </span>
+            <!--WORDPRESS-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-wordpress"></i>
+                    <p>Wordpress</p>
+                </a>
+            </span>
+            <!--PHP-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-php"></i>
+                    <p>PHP</p>
+                </a>
+            </span>
+            <!--JAVA-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-java"></i>
+                    <p>Java</p>
+                </a>
+            </span>
+            <!--PYTHON-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-python"></i>
+                    <p>Python</p>
+                </a>
+            </span>
+            <!--MYSQL-->
+            <span>
+                <a href="#project">
+                    <i class="fa-solid fa-database"></i>
+                    <p>MySql</p>
+                </a>
+            </span>
+            <!--FIGMA-->
+            <span>
+                <a href="#project">
+                    <i class="fa-brands fa-figma"></i>
+                    <p>Figma</p>
+                </a>
+            </span>
+            <!--GODOT-->
+            <span>
+                <a href="#project">
+                    <i class="devicon-godot-plain"></i>
+                    <p>Godot</p>
+                </a>
+            </span>
+        </main>
     </section>
-    <section class="contato" id="contato">
-        <a href="download/Currículo - José Marinaldo.pdf" download><img class="img-contato" src="imgs/curriculo.png" alt="Foto Curriculo"></a>
-        <div class="contato-right">
-            <p class="text-contato">Estou aberto a propostas e novas oportunidades. Sinta-se à vontade para entrar em contato!</p>
-            <div class="buttons">
-                <a class="btn1" href="mailto:marinaldoneto15@gmail.com"><img class="icons-contato" src="imgs/gmail.png" alt="gmail"> <p>Email</p></a></span>
-                <a class="btn2" href="www.linkedin.com/in/marinaldo-neto"><img class="icons-contato" src="imgs/linkedin.png" alt="linkedin"> <p>LinkedIn</p></a></span>
-                <a class="btn3" href="https://github.com/Marinaldo-Neto"><img class="icons-contato" src="imgs/github.png" alt="github"> <p>GitHub</p></a></span>
+
+    <!--SECTION 4-->
+    <section class="projects" id="project">
+        <!--TÍTULO-->
+        <h1>Projetos</h1>
+        <!--CONTAINER-->
+        <main>
+            <!--PATOS QUEST-->
+            <article>
+                <a href="https://antonio980.itch.io/patos-quest" rel="noopener noreferrer" target="_blank">
+                    <img src="img/PatosQuest.png" alt="Jogo Patos Quest: O Tesouro da Inclusão">
+                    <div>
+                        <h2>Patos Quest</h2>
+                        <span>
+                            <i class="devicon-godot-plain" aria-label="Godot Engine"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            <!-- GO+ LIST-->
+            <article>
+                <a href="https://marinaldo-neto.github.io/GOmais-LIST/" rel="noopener noreferrer" target="_blank">
+                    <img src="img/GoMaisList.png" alt="Projeto GO+ List">
+                    <div>
+                        <h2>GO+ List</h2>
+                        <span>
+                            <i class="fa-brands fa-html5" aria-label="HTML"></i>
+                            <i class="fa-brands fa-css3-alt" aria-label="CSS"></i>
+                            <i class="fa-brands fa-bootstrap" aria-label="Bootstrap"></i>
+                            <i class="fa-brands fa-square-js" aria-label="JavaScrit"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            <!--TOP PLAYLISTS-->
+            <article>
+                <a href="https://marinaldo-neto.github.io/topplaylists/" rel="noopener noreferrer" target="_blank">
+                    <img src="img/TopPlaylists.png" alt="Projeto Top Playlists">
+                    <div>
+                        <h2>Top Playlists</h2>
+                        <span>
+                            <i class="fa-brands fa-html5" aria-label="HTML"></i>
+                            <i class="fa-brands fa-bootstrap" aria-label="Bootstrap"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+        </main>
+    </section>
+
+    <!--SECTION 5-->
+    <section class="contact" id="contact">
+        <!--TÍTULO-->
+        <h1>Contatos</h1>
+        <!--CONTAINER-->
+        <main>
+            <!--LINKEDIN-->
+            <div>
+                <i class="fa-brands fa-square-linkedin"></i>
+                <h2>LinkedIn</h2>
+                <p><a href="https://www.linkedin.com/in/marinaldo-neto/" rel="noopener noreferrer" target="_blank">marinaldo-neto</a></p>
             </div>
-        </div>
+            <!--GITHUB-->
+            <div>
+                <i class="fa-brands fa-square-github"></i>
+                <h2>GitHub</h2>
+                <p><a href="https://github.com/Marinaldo-Neto" rel="noopener noreferrer" target="_blank">Marinaldo-Neto</a></p>
+            </div>
+            <!--GMAIL-->
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <h2>Email</h2>
+                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=marinaldoneto15@gmail.com" rel="noopener noreferrer" target="_blank">marinaldoneto15@gmail.com</a></p>
+            </div>
+        </main>
     </section>
+
+    <!--FOOTER-->
     <footer>
-        <p class="msg">"Nós só podemos ver um pouco do futuro, mas o suficiente para perceber que há muito a fazer."</p>
-        <p class="author">Alan Turing</p>
-        <p>© 2024 José Marinaldo. Todos os direitos reservados.</p>
+        <!--MENSAGEM DO TOPO-->
+        <span>
+            <h3>"Nós só podemos ver um pouco do futuro, mas o suficiente para perceber que há muito a fazer."</h3>
+            <p>Alan Turing</p>
+        </span>
+
+        <hr>
+
+        <!--PARTE DE BAIXO-->
+        <div>
+            <!--ESQUERDA-->
+            <span>
+                <p>&copy 2025 José Marinaldo T. Neto. Todos os direitos reservados.</p>
+            </span>
+            <!--DIREITA-->
+            <span>
+                <p>Desenvolvido com:</p>
+                <i class="fa-brands fa-html5" aria-label="HTML"></i>
+                <i class="fa-brands fa-sass" aria-label="SASS"></i>
+            </span>
+        </div>
     </footer>
 </body>
 </html>

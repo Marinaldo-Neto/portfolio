@@ -1,0 +1,207 @@
+@use 'mixins';
+@use 'colors';
+
+.home {
+    @include mixins.flex-center();
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    background: linear-gradient(0, colors.$darker, colors.$dark);
+    position: relative;
+
+    .esquerda {
+        @include mixins.flex-center();
+        flex-direction: column;
+        width: 60%;
+        height: 100%;
+        text-align: left;
+        padding-left: 50px;
+        gap: 32px;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 500;
+            text-shadow: 0px 0px 8px colors.$normal;
+            color: colors.$lighter;
+        }
+
+        .highlight {
+            color: colors.$light;
+        }
+
+        .linha {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            width: 100%;
+            gap: 16px;
+
+            .btn {
+                @include mixins.flex-center;
+                border-radius: 5px;
+                border: none;
+                width: 180px;
+                height: 50px;
+                font-weight: 500;
+                font-size: 1rem;
+
+                i {
+                    margin-right: 8px;
+                }
+
+                &.btn-download {
+                    background-color: colors.$light;
+
+                    a {
+                        color: colors.$dark;
+                        text-decoration: none;
+                        width: 100%;
+                        height: 100%;
+                        @include mixins.flex-center;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0px 0px 10px colors.$normal;
+                    }
+                }
+
+                &.btn-contact {
+                    background-color: colors.$dark;
+                    
+                    a {
+                        color: colors.$light;
+                        text-decoration: none;
+                        width: 100%;
+                        height: 100%;
+                        @include mixins.flex-center;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0px 0px 10px colors.$normal;
+                    }
+                }
+            }
+        }
+    }
+
+    .direita {
+        @include mixins.flex-center();
+        width: 40%;
+        height: 100%;
+        
+        img {
+            width: 80%;
+            height: auto;
+            border-radius: 55% 60% 50% 60%;
+            filter: drop-shadow(0px 0px 10px colors.$normal);
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        font-size: 1.5rem;
+        bottom: 48px;
+        color: colors.$lighter;
+        animation: movimentar 1.5s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+
+    @keyframes movimentar {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(16px);}
+        100% {transform: translateY(0);}
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        .esquerda {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .home {
+        .esquerda {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .esquerda {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .home {
+        flex-direction: column-reverse;
+
+        .esquerda {
+            width: 90%;
+            height: 50%;
+            text-align: center;
+            padding-left: 0px;
+            gap: 16px;
+
+            .linha {
+                justify-content: center;
+                gap: 8px;
+
+                .btn {
+                    width: 160px;
+                    height: 45px;
+                }
+            }
+        }
+
+        .direita {
+            width: 100%;
+            height: 50%;
+
+            img {
+                height: 90%;
+                width: auto;
+            }
+        }
+
+        .arrow {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .home {
+        .esquerda {
+            justify-content: space-evenly;
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .linha {
+                .btn {
+                    font-size: 0.9rem;
+
+                    i {
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

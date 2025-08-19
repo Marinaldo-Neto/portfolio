@@ -1,0 +1,83 @@
+@use 'colors';
+@use 'mixins';
+
+.about {
+    @include mixins.flex-center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+    color: colors.$lighter;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        text-shadow: 0px 0px 8px colors.$normal;
+        color: colors.$lighter;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 70%;
+        height: 80%;
+        font-size: 1.5rem;
+        text-align: center;
+
+        p {
+            text-shadow: 0px 0px 5px colors.$normal;
+        }
+
+        .highlight {
+            color: colors.$light;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        h1 {
+            font-size: 3rem;
+        }
+
+        main {
+            width: 90%;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .about {
+        h1 {
+            font-size: 2rem;
+        }
+
+        main {
+            font-size: 1rem;
+            height: 90%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .about {
+        main {
+            font-size: 0.9rem;
+        }
+    }
+}

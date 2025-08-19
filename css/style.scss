@@ -1,0 +1,30 @@
+@use 'partials/colors';
+@use 'partials/mixins';
+@use 'partials/header';
+@use 'partials/home';
+@use 'partials/about';
+@use 'partials/skills';
+@use 'partials/projects';
+@use 'partials/contact';
+@use 'partials/footer';
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background-color: colors.$darker;
+}
